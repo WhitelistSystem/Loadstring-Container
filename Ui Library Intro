@@ -1,0 +1,98 @@
+
+--. Ui
+
+local ScreenGui = Instance.new("ScreenGui")
+local T_1 = Instance.new("TextLabel")
+local T_2 = Instance.new("TextLabel")
+local T_3 = Instance.new("TextLabel")
+local Msg = Instance.new("TextLabel")
+local Head = Instance.new("TextLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+local Desc = Instance.new("TextLabel")
+local UIGradient_3 = Instance.new("UIGradient")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Name = "Symmetrical AdminBS"
+
+Msg.Name = "Msg"
+Msg.Parent = ScreenGui
+Msg.AnchorPoint = Vector2.new(0.5, 0.5)
+Msg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Msg.BackgroundTransparency = 1.000
+Msg.Position = UDim2.new(0.49988246, 0, 0.981006205, 0)
+Msg.Size = UDim2.new(0, 525, 0, 25)
+Msg.Font = Enum.Font.GothamSemibold
+Msg.Text = ""
+Msg.TextColor3 = Color3.fromRGB(199, 24, 24)
+Msg.TextSize = 15.000
+Msg.TextWrapped = true
+
+Head.Name = "Head"
+Head.Parent = ScreenGui
+Head.Active = true
+Head.AnchorPoint = Vector2.new(0.5, 0.5)
+Head.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Head.BackgroundTransparency = 1.000
+Head.Position = UDim2.new(0.5, 0, 0.48357287, 0)
+Head.Font = Enum.Font.GothamBlack
+Head.Text = "Symmetrical Admin"
+Head.TextColor3 = Color3.fromRGB(255, 255, 255)
+Head.TextScaled = true
+Head.TextSize = 14.000
+Head.TextWrapped = true
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 65, 68)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(67, 7, 126))}
+UIGradient_2.Parent = Head
+
+Desc.Name = "Desc"
+Desc.Parent = ScreenGui
+Desc.Active = true
+Desc.AnchorPoint = Vector2.new(0.5, 0.5)
+Desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Desc.BackgroundTransparency = 1.000
+Desc.Position = UDim2.new(0.5, 0, 0.534907639, 0)
+Desc.Font = Enum.Font.GothamBlack
+Desc.Text = "UI, Functions + Scripts by x_Axenicio"
+Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc.TextScaled = true
+Desc.TextSize = 14.000
+Desc.TextWrapped = true
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 65, 68)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(67, 7, 126))}
+UIGradient_3.Parent = Desc
+
+local function TDXA_fake_script() 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	wait(1)
+
+	t = function(text)
+		script.Parent.Msg.Text = text
+	end
+
+	t("loading gui")wait(.35)t("loading scripts")wait(.25)t("updating admin")wait(.5)t("checking for added parts")wait(.99)t("Loading Symmetrical Admin",1.25)
+
+	wait(1)
+
+	Msg.Text = ""
+
+	local t= game:GetService("TweenService")
+
+	local Head = script.Parent.Head
+	local Desc = script.Parent.Desc
+
+	t:Create(Head,TweenInfo.new(0.15,Enum.EasingStyle.Linear,Enum.EasingDirection.In),{Size = UDim2.new(0, 689,0, 89)}):Play()
+	t:Create(Desc,TweenInfo.new(0.15,Enum.EasingStyle.Linear,Enum.EasingDirection.In),{Size = UDim2.new(0, 610,0, 32)}):Play()
+
+	wait(2)
+
+	t:Create(Head,TweenInfo.new(0.15,Enum.EasingStyle.Linear,Enum.EasingDirection.Out),{Size = UDim2.new(0, 0,0, 0)}):Play()
+	t:Create(Desc,TweenInfo.new(0.15,Enum.EasingStyle.Linear,Enum.EasingDirection.Out),{Size = UDim2.new(0, 0,0, 0)}):Play()
+
+	t:Create(Head,TweenInfo.new(0.15,Enum.EasingStyle.Linear,Enum.EasingDirection.Out),{Position = UDim2.new(0.5,0,0.5,0)}):Play()
+	t:Create(Desc,TweenInfo.new(0.15,Enum.EasingStyle.Linear,Enum.EasingDirection.Out),{Position = UDim2.new(0.5,0,0.5,0)}):Play()
+
+	wait(2)
+	script.Parent.Premium.Visible = true
+end
+coroutine.wrap(TDXA_fake_script)()
