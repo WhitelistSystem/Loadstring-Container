@@ -1,0 +1,129 @@
+	local CmdsGui = Instance.new("ScreenGui")
+	local TopbarIcon = Instance.new("Frame")
+	local IconButton = Instance.new("ImageButton")
+	local UICorner = Instance.new("UICorner")
+	local UIGradient = Instance.new("UIGradient")
+	local IconImage = Instance.new("ImageLabel")
+	local cmdsframe = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local thingy = Instance.new("ScrollingFrame")
+	local UIListLayout = Instance.new("UIListLayout")
+	CmdsGui.Name = "CmdsGui"
+	CmdsGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	CmdsGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	TopbarIcon.Name = "TopbarIcon"
+	TopbarIcon.Parent = CmdsGui
+	TopbarIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TopbarIcon.BackgroundTransparency = 1.000
+	TopbarIcon.Position = UDim2.new(0, 104, 0, -32)
+	TopbarIcon.Size = UDim2.new(0, 32, 0, 32)
+	IconButton.Name = "IconButton"
+	IconButton.Parent = TopbarIcon
+	IconButton.BackgroundTransparency = 1.000
+	IconButton.BorderSizePixel = 0
+	IconButton.Size = UDim2.new(1, 0, 1, 0)
+	IconButton.ZIndex = 2
+	IconButton.Image = "http://www.roblox.com/asset/?id=5540166883"
+	IconButton.ImageColor3 = Color3.fromRGB(0, 0, 0)
+	IconButton.ImageTransparency = 0.500
+	IconButton.ScaleType = Enum.ScaleType.Crop
+	UICorner.CornerRadius = UDim.new(0.25, 0)
+	UICorner.Parent = IconButton
+	UIGradient.Parent = IconButton
+	IconImage.Name = "IconImage"
+	IconImage.Parent = IconButton
+	IconImage.AnchorPoint = Vector2.new(0.5, 0.5)
+	IconImage.BackgroundTransparency = 1.000
+	IconImage.Position = UDim2.new(0.5, 0, 0.5, 0)
+	IconImage.Size = UDim2.new(0, 20, 0, 20)
+	IconImage.ZIndex = 3
+	IconImage.Image = "http://www.roblox.com/asset/?id=3019710362"
+	IconImage.ScaleType = Enum.ScaleType.Fit
+	cmdsframe.Name = "cmdsframe"
+	cmdsframe.Parent = CmdsGui
+	cmdsframe.AnchorPoint = Vector2.new(0.5, 0.5)
+	cmdsframe.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+	cmdsframe.BorderColor3 = Color3.fromRGB(15, 15, 15)
+	cmdsframe.Position = UDim2.new(0.5, 0, 0.5, 0)
+	cmdsframe.Size = UDim2.new(0, 250, 0, 250)
+	UICorner_2.CornerRadius = UDim.new(0, 5)
+	UICorner_2.Parent = cmdsframe
+	thingy.Name = "thingy"
+	thingy.Parent = cmdsframe
+	thingy.Active = true
+	thingy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	thingy.BackgroundTransparency = 1.000
+	thingy.Position = UDim2.new(0, 0, 0.0320000015, 0)
+	thingy.Size = UDim2.new(0, 250, 0, 234)
+	thingy.ScrollBarThickness = 0
+	thingy.CanvasSize = UDim2.new(0,0,4.3,0)
+	UIListLayout.Parent = thingy
+	UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	
+	local function WKIYDAB_fake_script()
+		local script = Instance.new('LocalScript', CmdsGui)
+
+		local Blur = Instance.new("BlurEffect",workspace.CurrentCamera)
+		Blur.Size = 0
+
+		local ts = game:GetService("TweenService")
+		local ti = TweenInfo.new(0.5,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut)
+
+		local sdef = UDim2.new(0,0,0,0)
+		local tdef = 1
+
+		script.Parent.cmdsframe.Size = sdef
+		script.Parent.cmdsframe.BackgroundTransparency = tdef
+
+		script.Parent.cmdsframe.thingy.Size = UDim2.new(0,0, 0,0)
+
+		local inn = ts:Create(script.Parent.cmdsframe,ti,{Size = UDim2.new(0,250, 0,250)})
+		local in2 = ts:Create(script.Parent.cmdsframe.thingy,ti,{Size = UDim2.new(0,250, 0,234)})
+
+	--[[
+		for i,v in pairs(script.Parent.cmdsframe.thingy:GetChildren()) do
+			if v ~= script.Parent.cmdsframe.thingy.UIListLayout and v ~= script.parent.cmdsframe.thingy.LocalScript then
+				print("N: "..v.Name.." | T: "..v.Text.."")
+			end
+		end
+	]]
+
+		local bin = ts:Create(Blur,ti,{Size = 15})
+		local bout = ts:Create(Blur,ti,{Size = 0})
+
+		local outt = ts:Create(script.Parent.cmdsframe,ti,{Size = UDim2.new(0,0, 0,0)})
+		local out2 = ts:Create(script.Parent.cmdsframe.thingy,ti,{Size = UDim2.new(0,0, 0,0)})
+
+		local Button = script.Parent.TopbarIcon.IconButton
+
+		local Cooldown = false
+		local isOpen = false
+
+		script.Parent.cmdsframe.thingy.Size = UDim2.new(0,0, 0,0)
+
+		Button.MouseButton1Click:Connect(function()
+			if not Cooldown then
+				Cooldown = true
+
+				if not isOpen then
+					script.Parent.cmdsframe.BackgroundTransparency = 0
+					inn:Play()
+					in2:Play()
+					bin:Play()
+					isOpen = true
+				else	
+					outt:Play()
+					out2:Play()
+					bout:Play()
+					wait(.4)
+					script.Parent.cmdsframe.BackgroundTransparency = 1
+					isOpen = false
+				end
+
+				wait(.3)
+				Cooldown = false
+			end
+		end)
+	end
+	coroutine.wrap(WKIYDAB_fake_script)()
