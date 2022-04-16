@@ -1,0 +1,109 @@
+--> Ui
+
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/WhitelistSystem/Loadstring-Container/main/Ui%20for%20Admin"))()
+
+---> Services
+
+local LP = game.Players.LocalPlayer
+
+local BP = LP.Backpack
+local PG = LP.PlayerGui
+
+--> Customizable
+
+ver = '1.2'
+
+prefix = '!'
+
+local PlayUi = game.Players.LocalPlayer.PlayerGui
+local ChatUi = PlayUi:FindFirstChild("Chat").Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.TextLabel
+
+--> Functions
+
+function findplayer(String)
+	if not String then return end
+	local Yes = {}
+	for _, Player in ipairs(game.Players:GetPlayers()) do
+		if string.lower(Player.Name):match(string.lower(String)) or string.lower(Player.DisplayName):match(string.lower(String)) then
+			table.insert(Yes, Player)
+		end
+	end
+	if #Yes > 0 then
+		return Yes[1]
+	elseif #Yes < 1 then
+		return nil
+	end
+end
+
+--> Games
+
+Games = {
+	["Iron Man Simulator"] = 1735775055,
+}
+
+--> Game Checking + Running [games: Prison Life]
+
+if game.PlaceId == Games["Iron Man Simulator"] then
+
+--. Commands Ui
+
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/WhitelistSystem/Loadstring-Container/main/Cmds%20Ui%20for%20admin"))()
+
+--. Commands
+	local function VKXRBSY_fake_script()
+		local script = Instance.new('LocalScript', thingy)
+
+		local Cmd = {}
+
+		function Cmd(txt)
+			local Command = Instance.new("TextLabel")
+			Command.Name = "Command[#]"
+			Command.Parent = game.Players.LocalPlayer.PlayerGui.CmdsGui.cmdsframe.thingy
+			Command.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Command.BackgroundTransparency = 1.000
+			Command.Position = UDim2.new(0.00600000005, 0, 0, 0)
+			Command.Size = UDim2.new(0, 247, 0, 25)
+			Command.Font = Enum.Font.Gotham
+			Command.Text = txt
+			Command.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Command.TextSize = 14.000
+		end
+
+		--> Adding Commands;
+		
+		Cmd'snap [all, others, plr]'
+		Cmd'explode [all, others, plr]'
+		Cmd'punch [all, others, plr]'
+		Cmd'kill [all, others, plr]'
+		Cmd'rocket [all, others, plr]'
+		Cmd'harmless [all, others, plr]'
+		Cmd'confuse [all, others, plr]'
+		Cmd'loopkill [all, others, plr]'
+		Cmd'loopharmless [all, others, plr]'
+        Cmd'loopconfuse [all, others, plr]'
+		
+	end
+	coroutine.wrap(VKXRBSY_fake_script)()
+
+	--> Admin Commands
+
+	LP.Chatted:Connect(function(msg)
+
+		local Args = msg:split(' ')
+		local Cmd = Args[1]
+
+		local Aimed = findplayer(Args[2])
+
+		--> Blatant Cmds
+
+		if Cmd == prefix..'snap' then
+			if Args[2]:lower() == "all" or Args[2]:lower() == "others" then
+				for i,v in pairs(game.Players:GetPlayers()) do
+
+					
+				end
+
+			end
+		end
+        end)
+	end
