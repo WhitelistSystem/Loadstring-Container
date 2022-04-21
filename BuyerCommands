@@ -781,5 +781,6 @@ lplayer = player
 lp = player
 
 if player.UserId == 2247132964 then
+else
 print("Not Approved Whitelist for Buyer Commands")
 end
