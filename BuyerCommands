@@ -1,0 +1,785 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/WallysUIlibraries/Ul-libraries/main/ui%20v6", true))()
+local IronManSimulatorWindow = library:CreateWindow("General")
+local Window_1 = IronManSimulatorWindow:AddFolder("Local Suit")
+local uni = library:CreateWindow("Misc")
+local OtherStuffWindow = library:CreateWindow("Other")
+local Window_2 = OtherStuffWindow:AddFolder("Hot Suits")
+--local Window_3 = OtherStuffWindow:AddFolder("Teleport")--
+local ChatCommandsWindow = library:CreateWindow("Chat Commands")
+
+ChatCommandsWindow:AddLabel({text = 'snap [all, plr]',state = false,callback = function(s)
+end})
+ChatCommandsWindow:AddLabel({text = 'loopkill [all, plr]',state = false,callback = function(s)
+end})
+ChatCommandsWindow:AddLabel({text = 'fling [all, plr]',state = false,callback = function(s)
+end})
+ChatCommandsWindow:AddLabel({text = 'loopfling [all, plr]',state = false,callback = function(s)
+end})
+ChatCommandsWindow:AddLabel({text = 'confuse [all, plr]',state = false,callback = function(s)
+end})
+ChatCommandsWindow:AddLabel({text = 'loopconfuse [all, plr]',state = false,callback = function(s)
+end})
+ChatCommandsWindow:AddLabel({text = 'harmless [all, plr]',state = false,callback = function(s)
+end})
+ChatCommandsWindow:AddLabel({text = 'loopharmless [all, plr]',state = false,callback = function(s)
+end})
+
+--. Window_1 ["Local Suit"]
+
+Window_1:AddBind({text = "Instant Suit", key = "Q", save = true, callback = function()
+    local UserInputService = game:GetService("UserInputService")
+local function GetInput(input, gpe)
+if input.KeyCode == Enum.KeyCode.Q then 
+    
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("Helmet")
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("Mask")
+
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("UpperTorso")
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("LowerTorso")
+
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("LeftUpperArm")
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("LeftLowerArm")
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("LeftHand")
+
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("RightUpperArm")
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("RightLowerArm")
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("RightHand")
+
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("LeftUpperLeg")
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("LeftLowerLeg")
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("LeftFoot")
+
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("RightUpperLeg")
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("RightLowerLeg")
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer("RightFoot")
+
+end
+end
+
+UserInputService.InputBegan:Connect(GetInput)
+end})
+
+Window_1:AddList({text = "Chrome Suit", flag = "casuit", value = "Select Chrome Part", values = {"UpperTorso", "LeftUpperArm", "RightUpperArm", "RightLowerArm", "LeftLowerArm", "LeftHand", "RightHand", "LowerTorso", "RightupperLeg", "LeftUpperLeg", "RightLowerLeg", "LeftLowerLeg", "RightFoot", 
+"LeftFoot"}, callback = function(suit)
+    
+    if suit == "UpperTorso" then
+        game.Players.LocalPlayer.Character.Suit.UpperTorso.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.UpperTorso.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.UpperTorso.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.UpperTorso.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.UpperTorso.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.UpperTorso.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.UpperTorso.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.UpperTorso.Union:Destroy()
+end
+    
+    if suit == "LeftUpperArm" then
+game.Players.LocalPlayer.Character.Suit.LeftUpperArm.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftUpperArm.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftUpperArm.Part:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftUpperArm.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftUpperArm.Union:Destroy()
+end
+    
+    if suit == "RightUpperArm" then
+game.Players.LocalPlayer.Character.Suit.RightUpperArm.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightUpperArm.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightUpperArm.Part:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightUpperArm.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightUpperArm.Union:Destroy()
+end
+    
+    if suit == "RightLowerArm" then
+game.Players.LocalPlayer.Character.Suit.RightLowerArm.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightLowerArm.Union:Destroy()
+end
+    
+    if suit == "LeftLowerArm" then
+        for v = 1, 15 do
+game.Players.LocalPlayer.Character.Suit.LeftLowerArm.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftLowerArm.Union:Destroy()
+        end
+end
+    
+    if suit == "LeftHand" then
+game.Players.LocalPlayer.Character.Suit.LeftHand.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftHand.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftHand.Union:Destroy()
+end
+    
+    if suit == "RightHand" then
+game.Players.LocalPlayer.Character.Suit.RightHand.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightHand.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightHand.Union:Destroy()
+end
+    
+    if suit == "LowerTorso" then
+game.Players.LocalPlayer.Character.Suit.LowerTorso.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LowerTorso.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LowerTorso.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LowerTorso.Union:Destroy()
+end
+    
+    if suit == "RightupperLeg" then
+ game.Players.LocalPlayer.Character.Suit.RightUpperLeg.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightUpperLeg.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightUpperLeg.Part:Destroy()
+end
+    
+    if suit == "LeftUpperLeg" then
+game.Players.LocalPlayer.Character.Suit.LeftUpperLeg.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftUpperLeg.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftUpperLeg.Part:Destroy()
+end
+    
+    if suit == "RightLowerLeg" then
+        game.Players.LocalPlayer.Character.Suit.RightLowerLeg.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightLowerLeg.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.RightLowerLeg.Union:Destroy()
+end
+    
+    if suit == "LeftLowerLeg" then
+       game.Players.LocalPlayer.Character.Suit.LeftLowerLeg.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftLowerLeg.Union:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftLowerLeg.Union:Destroy()
+end
+    
+    if suit == "RightFoot" then
+        game.Players.LocalPlayer.Character.Suit.RightFoot.Union:Destroy()
+end
+    
+    if suit == "LeftFoot" then
+        for v = 1, 15 do
+        game.Players.LocalPlayer.Character.Suit.LeftFoot.Union:Destroy()
+end
+end
+end})
+
+Window_1:AddToggle({text = 'No Cooldown Toggle',state = false,callback = function(s)
+        local r = require(game:service('ReplicatedStorage').suitData)
+        r = r.suitData
+        for a=2,40 do
+            pcall(function()
+                r['Mark'..a].cooldownMult = s and math.huge or 1
+            end)
+        end
+end})
+
+Window_1:AddToggle({text = 'GodMode',state = false,callback = function(s)
+local player = game:GetService("Players").LocalPlayer
+if player and player.Character then 
+if player.Character:FindFirstChild("Humaniod") then 
+for i,v2 in pairs(player.Character.Suit:GetChildren())do 
+if v2:FindFirstChild("Suit") then 
+player.Backpack.suitControl.Assets.Events.punchHit:FireServer(v2.Union, -math.huge)
+end
+end
+end
+end
+end})
+
+Window_1:AddToggle({text = 'Auto Send Suit',state = false,callback = function(s)
+    local LSend; 
+function loop()
+    while LSend == true do
+        wait()
+    pcall(function()
+    for i,v in pairs(game.Players:GetPlayers()) do
+        if v ~= game.Players.LocalPlayer then
+        local player = game:GetService('Players').LocalPlayer
+        if player and player.Character then
+        if player.Character:FindFirstChild('ForceField') then
+            
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark33", tick(), 0)
+        end
+        end
+
+            end
+        end
+    end)
+    end
+end
+LSend = true
+loop()
+end})
+
+Window_1:AddToggle({text = 'Auto Unbreakable Suit',state = false,callback = function(s)
+game.Players.LocalPlayer.Character.Suit.Status.damageTaken:Destroy()
+wait()
+local LSnap; 
+function loopsnap()
+    while LSnap == true do
+        wait()
+    pcall(function()
+    for i,v in pairs(game.Players:GetPlayers()) do
+        if v ~= game.Players.LocalPlayer then
+        local player = game:GetService('Players').LocalPlayer
+        if player and player.Character then
+        if player.Character:FindFirstChild('Suit') then
+            wait(.6)
+            wait(6)
+            wait(4)
+            wait(2)
+        game.Players.LocalPlayer.Character.Suit.Status.damageTaken:Destroy()
+        end
+end
+
+            end
+        end
+    end)
+    end
+end
+LSnap = true
+loopsnap()
+end})
+
+Window_1:AddBind({text = "Fast Reset Suit", key = "R_Control", save = true, callback = function()
+
+local UserInputService = game:GetService("UserInputService")
+local function GetInput(input, gpe)
+if input.KeyCode == Enum.KeyCode.RightControl then 
+    
+game:GetService("Players").LocalPlayer.Backpack.suitControl.Assets.Events.Eject:FireServer()
+
+wait(1)
+
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.removeSuit:FireServer()
+
+local player = game:GetService('Players').LocalPlayer
+if player and player.Character then
+if player.Character:FindFirstChild('Suit') then
+game.Players.LocalPlayer.Character.Suit:Destroy()
+wait()
+
+game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark33", tick(), 0)
+end
+end
+end
+end
+UserInputService.InputBegan:Connect(GetInput)
+end})
+
+Window_1:AddList({text = "Select a Part", flag = "casuit", value = "Call Piece", values = {"Call All", "Mask", "Helmet", "UpperTorso", "LeftUpperArm", "RightUpperArm", "RightLowerArm", "LeftLowerArm", "LeftHand", "RightHand", "LowerTorso", "RightupperLeg", "LeftUpperLeg", "RightLowerLeg", "LeftLowerLeg", "RightFoot", 
+"LeftFoot"}, callback = function(suit)
+    
+    if suit == "Call All" then
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('Helmet')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('Mask')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('UpperTorso')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftUpperArm')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightUpperArm')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightLowerArm')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftLowerArm')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftHand')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightHand')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LowerTorso')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightUpperLeg')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftUpperLeg')
+         game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightLowerLeg')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftLowerLeg')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightFoot')
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftFoot')
+end
+if suit == "Mask" then
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('Mask')
+end
+if suit == "Helmet" then
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('Helmet')
+end
+    if suit == "UpperTorso" then
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('UpperTorso')
+end
+    
+    if suit == "LeftUpperArm" then
+game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftUpperArm')
+end
+    
+    if suit == "RightUpperArm" then
+game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightUpperArm')
+end
+    
+    if suit == "RightLowerArm" then
+game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightLowerArm')
+end
+    
+    if suit == "LeftLowerArm" then
+        for v = 1, 15 do
+game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftLowerArm')
+        end
+end
+    
+    if suit == "LeftHand" then
+game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftHand')
+end
+    
+    if suit == "RightHand" then
+game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightHand')
+end
+    
+    if suit == "LowerTorso" then
+game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LowerTorso')
+end
+    
+    if suit == "RightupperLeg" then
+ game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightUpperLeg')
+end
+    
+    if suit == "LeftUpperLeg" then
+game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftUpperLeg')
+end
+    
+    if suit == "RightLowerLeg" then
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightLowerLeg')
+end
+    
+    if suit == "LeftLowerLeg" then
+       game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftLowerLeg')
+end
+    
+    if suit == "RightFoot" then
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('RightFoot')
+end
+    
+    if suit == "LeftFoot" then
+        game.Players.LocalPlayer.Backpack.ironMan.Assets.Events.callPiece:FireServer('LeftFoot')
+end
+end})
+
+Window_1:AddButton({text = 'Infinite Power',state = false,callback = function(s)
+        pcall(function()
+        game:service('RunService').Stepped:connect(function(s)
+        game.Players.LocalPlayer.Character.Suit.Status.Power.Value = true
+        game.Players.LocalPlayer.Character.Suit.Status.Charge.Value = math.huge
+        game.Players.LocalPlayer.Character.Suit.Status.Power.Value = true
+end)
+end)
+end})
+
+Window_1:AddButton({text = 'Strong Blasts',state = false,callback = function(s)
+    local clone = game.Players.LocalPlayer.Backpack.suitControl.Client:Clone()
+	clone.Parent = game.Players.LocalPlayer.Backpack.suitControl
+	clone.Parent = game.Players.LocalPlayer.Backpack.suitControl
+	clone.Parent = game.Players.LocalPlayer.Backpack.suitControl
+	clone.Parent = game.Players.LocalPlayer.Backpack.suitControl
+	clone.Parent = game.Players.LocalPlayer.Backpack.suitControl
+	clone.Parent = game.Players.LocalPlayer.Backpack.suitControl
+	clone.Parent = game.Players.LocalPlayer.Backpack.suitControl
+	clone.Parent = game.Players.LocalPlayer.Backpack.suitControl
+	clone.Parent = game.Players.LocalPlayer.Backpack.suitControl
+	clone.Parent = game.Players.LocalPlayer.Backpack.suitControl
+end})
+
+Window_1:AddButton({text = 'Unbreakable Suit',state = false,callback = function(s)
+    game.Players.LocalPlayer.Character.Suit.Status.damageTaken:Destroy()
+end})
+
+Window_1:AddButton({text = 'GodMode',state = false,callback = function(s)
+local player = game:GetService("Players").LocalPlayer
+if player and player.Character then 
+if player.Character:FindFirstChild("Suit") then 
+for i,v2 in pairs(player.Character.Suit:GetChildren())do 
+if v2:FindFirstChild("Union") then 
+player.Backpack.suitControl.Assets.Events.punchHit:FireServer(v2.Union, -math.huge)
+end
+end
+end
+end
+end})
+
+Window_1:AddButton({text = 'No Mask Boundary',state = false,callback = function(s)
+    game.Players.LocalPlayer.Character.Suit.Mask.Eyes:Destroy()
+end})
+
+Window_1:AddButton({text = 'Chrome All',state = false,callback = function(s)
+    for i,v in pairs(game.Players.LocalPlayer.Character.Suit:GetDescendants()) do
+    if v.name == "Union" then
+    if v ~= game.Players.LocalPlayer.Character.Suit.Helmet.Union then
+    v:Destroy()
+        end
+    end
+end
+game.Players.LocalPlayer.Character.Suit.RightUpperArm.Part:Destroy()
+game.Players.LocalPlayer.Character.Suit.LeftUpperArm.Part:Destroy()
+end})
+
+Window_1:AddList({text = "Suits", flag = "casuit", value = "Select a Suit", values = {"Mark2", "Mark3", "Mark4", "Mark6", "Mark9", "Mark12", "Mark13", "Mark14", "Mark19", "Mark20", "Mark21", 
+"Mark23", "Mark27", "Mark28", "Mark30", "Mark31", "Mark33", "Mark40", "Mark42","WarMachine"}, callback = function(suit)
+    
+    if suit == "Mark2" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark2", tick(), 0)
+        end
+end
+    
+    if suit == "Mark4" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark4", tick(), 0)
+        end
+end
+    
+    if suit == "Mark6" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark6", tick(), 0)
+        end
+end
+    
+    if suit == "Mark9" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark9", tick(), 0)
+        end
+end
+    
+    if suit == "Mark12" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark12", tick(), 0)
+        end
+end
+    
+    if suit == "Mark13" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark13", tick(), 0)
+        end
+end
+    
+    if suit == "Mark14" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark14", tick(), 0)
+        end
+end
+    
+    if suit == "Mark19" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark19", tick(), 0)
+        end
+end
+    
+    if suit == "Mark20" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark20", tick(), 0)
+        end
+end
+    
+    if suit == "Mark21" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark21", tick(), 0)
+        end
+end
+    
+    if suit == "Mark23" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark23", tick(), 0)
+        end
+end
+    
+    if suit == "Mark27" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark27", tick(), 0)
+        end
+end
+    
+    if suit == "Mark28" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark28", tick(), 0)
+        end
+end
+    
+    if suit == "Mark30" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark30", tick(), 0)
+        end
+end
+    
+    if suit == "Mark31" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark31", tick(), 0)
+        end
+end
+    
+    if suit == "Mark33" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark33", tick(), 0)
+        end
+end
+    
+    if suit == "Mark40" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark40", tick(), 0)
+        end
+end
+    
+    if suit == "Mark42" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark42", tick(), 0)
+        wait(1)
+        local Player = game:GetService("Players").LocalPlayer
+Player.Backpack.ironMan.Assets.Events.callSuit:FireServer('Mark42')
+Player.Character.Suit.Status.Model.Value = 'Mark33'
+Player.Character.Suit.UpperTorso.Light.Name = 'Reactor'
+local Character = Player.Character
+local P1 = Instance.new("ParticleEmitter")
+local P2 = Instance.new("ParticleEmitter")
+P1.Name = 'repulsorFire'
+P2.Name = 'repulsorSparks'
+P1.Texture = 'http://www.roblox.com/asset/?id=0'
+P2.Texture = 'http://www.roblox.com/asset/?id=0'
+local Sound1 = Instance.new("Sound")
+Sound1.SoundId = 'http://www.roblox.com/asset/?id=97179333'
+Sound1.Looped = true
+local Sound2 = Instance.new("Sound")
+Sound2.SoundId = 'http://www.roblox.com/asset/?id=97179333'
+Sound2.Looped = true
+local Sound3 = Instance.new("Sound")
+Sound3.SoundId = 'http://www.roblox.com/asset/?id=97179333'
+Sound3.Looped = true
+local Sound4 = Instance.new("Sound")
+Sound4.SoundId = 'http://www.roblox.com/asset/?id=97179333'
+Sound4.Looped = true
+local Sound5 = Instance.new("Sound")
+Sound5.SoundId = 'rbxassetid://1010380770'
+local Sound6 = Instance.new("Sound")
+Sound6.SoundId = 'rbxassetid://1010380770'
+local Sound7 = Instance.new("Sound")
+Sound7.SoundId = 'rbxassetid://1010380770'
+local Sound8 = Instance.new("Sound")
+Sound8.SoundId = 'rbxassetid://1010380770'
+local Attachment = Instance.new("Attachment")
+Attachment.Name = 'Exhaust'
+local R1 = Instance.new("Sound")
+R1.SoundId = 'rbxasset://sounds/Launching rocket.wav'
+R1.Name = 'repulsor1'
+local R2 = Instance.new("Sound")
+R2.SoundId = 'rbxassetid://618826713'
+R2.Name = 'repulsor2'
+local R3 = Instance.new("Sound")
+R3.SoundId = 'rbxasset://sounds/Launching rocket.wav'
+R3.Name = 'repulsor1'
+local R4 = Instance.new("Sound")
+R4.SoundId = 'rbxassetid://618826713'
+R4.Name = 'repulsor2'
+local R5 = Instance.new("Sound")
+R5.SoundId = 'rbxasset://sounds/Launching rocket.wav'
+R5.Name = 'repulsor1'
+local R6 = Instance.new("Sound")
+R6.SoundId = 'rbxassetid://618826713'
+R6.Name = 'repulsor2'
+local R7 = Instance.new("Sound")
+R7.SoundId = 'rbxasset://sounds/Launching rocket.wav'
+R7.Name = 'repulsor1'
+local R8 = Instance.new("Sound")
+R8.SoundId = 'rbxassetid://618826713'
+R8.Name = 'repulsor2'
+local R9 = Instance.new("Sound")
+R9.SoundId = 'rbxasset://sounds/Launching rocket.wav'
+R9.Name = 'repulsor1'
+local R10 = Instance.new("Sound")
+R10.SoundId = 'rbxassetid://618826713'
+R10.Name = 'repulsor2'
+Sound1.Name = 'Fly'
+Sound2.Name = 'Fly'
+Sound3.Name = 'Fly'
+Sound4.Name = 'Fly'
+Sound5.Name = 'flyStart'
+Sound6.Name = 'flyStart'
+Sound7.Name = 'flyStart'
+Sound8.Name = 'flyStart'
+Sound1.Parent = Character.Suit.LeftHand.Main
+Sound2.Parent = Character.Suit.RightHand.Main
+Sound3.Parent = Character.Suit.LeftFoot.Main
+Sound4.Parent = Character.Suit.RightFoot.Main
+Sound5.Parent = Character.Suit.LeftHand.Main
+Sound6.Parent = Character.Suit.RightHand.Main
+Sound7.Parent = Character.Suit.LeftFoot.Main
+Sound8.Parent = Character.Suit.RightFoot.Main
+R1.Parent = Character.Suit.UpperTorso.Main
+R2.Parent = Character.Suit.UpperTorso.Main
+R3.Parent = Character.Suit.LeftHand.Main
+R4.Parent = Character.Suit.LeftHand.Main
+R5.Parent = Character.Suit.RightHand.Main
+R6.Parent = Character.Suit.RightHand.Main
+R7.Parent = Character.Suit.LeftHand.Main
+R8.Parent = Character.Suit.LeftHand.Main
+R9.Parent = Character.Suit.RightHand.Main
+R10.Parent = Character.Suit.RightHand.Main
+Attachment.Parent = Character.Suit.UpperTorso.Reactor
+P1.Parent = Character.Suit.UpperTorso.Reactor.Exhaust
+P2.Parent = Character.Suit.UpperTorso.Reactor.Exhaust
+        end
+end
+
+    if suit == "WarMachine" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("WarMachine1", tick(), 0)
+        end
+end
+end})
+
+Window_2:AddList({text = "Select a Suit", flag = "casuit", value = "Select a Hot Suit", values = {"Mark33", "Mark42", "Mark30", "Mark40","WarMachine"}, callback = function(suit)
+    
+    if suit == "Mark33" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark33", tick(), 0)
+        end
+end
+
+    if suit == "Mark42" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark42", tick(), 0)
+        wait(1)
+        local Player = game:GetService("Players").LocalPlayer
+Player.Backpack.ironMan.Assets.Events.callSuit:FireServer('Mark42')
+Player.Character.Suit.Status.Model.Value = 'Mark33'
+Player.Character.Suit.UpperTorso.Light.Name = 'Reactor'
+local Character = Player.Character
+local P1 = Instance.new("ParticleEmitter")
+local P2 = Instance.new("ParticleEmitter")
+P1.Name = 'repulsorFire'
+P2.Name = 'repulsorSparks'
+P1.Texture = 'http://www.roblox.com/asset/?id=0'
+P2.Texture = 'http://www.roblox.com/asset/?id=0'
+local Sound1 = Instance.new("Sound")
+Sound1.SoundId = 'http://www.roblox.com/asset/?id=97179333'
+Sound1.Looped = true
+local Sound2 = Instance.new("Sound")
+Sound2.SoundId = 'http://www.roblox.com/asset/?id=97179333'
+Sound2.Looped = true
+local Sound3 = Instance.new("Sound")
+Sound3.SoundId = 'http://www.roblox.com/asset/?id=97179333'
+Sound3.Looped = true
+local Sound4 = Instance.new("Sound")
+Sound4.SoundId = 'http://www.roblox.com/asset/?id=97179333'
+Sound4.Looped = true
+local Sound5 = Instance.new("Sound")
+Sound5.SoundId = 'rbxassetid://1010380770'
+local Sound6 = Instance.new("Sound")
+Sound6.SoundId = 'rbxassetid://1010380770'
+local Sound7 = Instance.new("Sound")
+Sound7.SoundId = 'rbxassetid://1010380770'
+local Sound8 = Instance.new("Sound")
+Sound8.SoundId = 'rbxassetid://1010380770'
+local Attachment = Instance.new("Attachment")
+Attachment.Name = 'Exhaust'
+local R1 = Instance.new("Sound")
+R1.SoundId = 'rbxasset://sounds/Launching rocket.wav'
+R1.Name = 'repulsor1'
+local R2 = Instance.new("Sound")
+R2.SoundId = 'rbxassetid://618826713'
+R2.Name = 'repulsor2'
+local R3 = Instance.new("Sound")
+R3.SoundId = 'rbxasset://sounds/Launching rocket.wav'
+R3.Name = 'repulsor1'
+local R4 = Instance.new("Sound")
+R4.SoundId = 'rbxassetid://618826713'
+R4.Name = 'repulsor2'
+local R5 = Instance.new("Sound")
+R5.SoundId = 'rbxasset://sounds/Launching rocket.wav'
+R5.Name = 'repulsor1'
+local R6 = Instance.new("Sound")
+R6.SoundId = 'rbxassetid://618826713'
+R6.Name = 'repulsor2'
+local R7 = Instance.new("Sound")
+R7.SoundId = 'rbxasset://sounds/Launching rocket.wav'
+R7.Name = 'repulsor1'
+local R8 = Instance.new("Sound")
+R8.SoundId = 'rbxassetid://618826713'
+R8.Name = 'repulsor2'
+local R9 = Instance.new("Sound")
+R9.SoundId = 'rbxasset://sounds/Launching rocket.wav'
+R9.Name = 'repulsor1'
+local R10 = Instance.new("Sound")
+R10.SoundId = 'rbxassetid://618826713'
+R10.Name = 'repulsor2'
+Sound1.Name = 'Fly'
+Sound2.Name = 'Fly'
+Sound3.Name = 'Fly'
+Sound4.Name = 'Fly'
+Sound5.Name = 'flyStart'
+Sound6.Name = 'flyStart'
+Sound7.Name = 'flyStart'
+Sound8.Name = 'flyStart'
+Sound1.Parent = Character.Suit.LeftHand.Main
+Sound2.Parent = Character.Suit.RightHand.Main
+Sound3.Parent = Character.Suit.LeftFoot.Main
+Sound4.Parent = Character.Suit.RightFoot.Main
+Sound5.Parent = Character.Suit.LeftHand.Main
+Sound6.Parent = Character.Suit.RightHand.Main
+Sound7.Parent = Character.Suit.LeftFoot.Main
+Sound8.Parent = Character.Suit.RightFoot.Main
+R1.Parent = Character.Suit.UpperTorso.Main
+R2.Parent = Character.Suit.UpperTorso.Main
+R3.Parent = Character.Suit.LeftHand.Main
+R4.Parent = Character.Suit.LeftHand.Main
+R5.Parent = Character.Suit.RightHand.Main
+R6.Parent = Character.Suit.RightHand.Main
+R7.Parent = Character.Suit.LeftHand.Main
+R8.Parent = Character.Suit.LeftHand.Main
+R9.Parent = Character.Suit.RightHand.Main
+R10.Parent = Character.Suit.RightHand.Main
+Attachment.Parent = Character.Suit.UpperTorso.Reactor
+P1.Parent = Character.Suit.UpperTorso.Reactor.Exhaust
+P2.Parent = Character.Suit.UpperTorso.Reactor.Exhaust
+        end
+end
+
+    if suit == "Mark30" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark30", tick(), 0)
+        end
+end
+
+    if suit == "Mark40" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("Mark40", tick(), 0)
+        end
+end
+
+    if suit == "WarMachine" then
+        for v = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.ironMan.Assets.Events.callSuit:FireServer("WarMachine1", tick(), 0)
+        end
+end
+end})
+
+uni:AddBind({text = "UI Bind", key = "LeftControl", save = true, callback = function() library:Close() end})
+
+uni:AddLabel({text = 'Verison: v.0.4',state = false,callback = function(s)
+end})
+
+uni:AddButton({text = 'Admin',state = false,callback = function(s)
+end})
+
+local Folder_4 = uni:AddFolder("Iron Man Simulator")
+
+Folder_4:AddToggle({text = 'Anti Lag',state = false,callback = function(s)
+end})
+
+Folder_4:AddToggle({text = 'Anti-Fling',state = false,callback = function(s)
+end})
+
+Folder_4:AddToggle({text = 'Anti-Fling 2',state = false,callback = function(s)
+end})
+
+Folder_4:AddButton({text = 'Kill All',state = false,callback = function(s)
+end})
+
+Folder_4:AddButton({text = 'Confuse All',state = false,callback = function(s)
+end})
+
+Folder_4:AddButton({text = 'Fling All',state = false,callback = function(s)
+end})
+
+library:Init()
+
+local Good = "http://www.roblox.com/asset/?id=4914902889"
+local Bad = "http://www.roblox.com/asset/?id=2022095309"
+
+ScriptDisabled = false
+
+Silent = true
+
+player = game.Players.LocalPlayer
+lplayer = player
+lp = player
+
+if player.UserId == 2247132964 then
+print("Not Approved Whitelist for Buyer Commands")
+end
