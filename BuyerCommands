@@ -782,5 +782,6 @@ lp = player
 
 if player.UserId == 2247132964 then
 else
-print("Not Approved Whitelist for Buyer Commands")
+wait(0)
+game:GetService("Players").LocalPlayer:Kick("DM (x_Axenicio#3860) To Be Whitelisted!")
 end
